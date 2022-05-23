@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<div id="content" class="hide">
+<div id="content" class="hide" style="display:none;">
     <!-- Banner -->
     <div>
         <div class="banner-image clipped"></div>
