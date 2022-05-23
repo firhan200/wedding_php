@@ -16,7 +16,7 @@
 <div class="firework-15"></div>
 <!-- firework -->
 
-<div class="first-show banner-image" id="first-card">
+<div class="first-show banner-image show" id="first-card">
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-sm-12 col-md-6 col-lg-6 mt-5 pt-5 mb-5">
@@ -31,7 +31,7 @@
     </div>
 </div>
 
-<div id="content" style="display:none;">
+<div id="content" class="hide">
     <!-- Banner -->
     <div>
         <div class="banner-image clipped"></div>

@@ -77,6 +77,14 @@ body {
 	position: absolute;
 }
 
+.hide{
+	display: none;
+}
+
+.show{
+	display: block;
+}
+
 /* firework */
 [class^=firework-] {
 position: absolute;

@@ -32,9 +32,9 @@ $(document).ready(function(){
     }
 
     $("#first-card").on('click', function(){
-        alert("test");
-        $("#content").show();
-        $("#first-card").hide();
+        $("#content").addClass('show');
+        $("#first-card").removeClass('show');
+        $("#first-card").addClass('hide');
     });
 
     $("#message").bind('change keyup', function(){
