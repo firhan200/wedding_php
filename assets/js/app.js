@@ -72,6 +72,12 @@ $(document).ready(function(){
 
     getRsvp();
 
+    var sanitizeHTML = function (str) {
+        return str.replace(/[^\w. ]/gi, function (c) {
+            return '&#' + c.charCodeAt(0) + ';';
+        });
+    };
+
     function getRsvp(){
         $.ajax({
             url: $("body").data('site-url')+'/rsvp/list',
@@ -86,7 +92,7 @@ $(document).ready(function(){
                 $("#rsvp-list").html('');
 
                 for(var i=0; i< res.length;i++){
-                    $("#rsvp-list").append('<div class="p-3 mt-3 bg-light text-dark rounded"><h4><b>'+res[i].name+'</b></h4><h5>'+res[i].message+'</h5><div class="text-end">'+res[i].created_at+'</div></div>');
+                    $("#rsvp-list").append('<div class="p-3 mt-3 bg-light text-dark rounded"><h4><b>'+res[i].name+'</b></h4><h5>'+sanitizeHTML(res[i].message)+'</h5><div class="text-end">'+res[i].created_at+'</div></div>');
                 }
             },
             error: function(err){
