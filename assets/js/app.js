@@ -31,7 +31,7 @@ $(document).ready(function(){
         timer = setInterval(updateClock, 1000);
     }
 
-    $("#first-card").on('click', function(){
+    $("#open-invitation").on('click', function(){
         $("#content").addClass('show');
         $("#first-card").removeClass('show');
         $("#first-card").addClass('hide');
