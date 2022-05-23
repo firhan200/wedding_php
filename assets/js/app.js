@@ -31,15 +31,16 @@ $(document).ready(function(){
         timer = setInterval(updateClock, 1000);
     }
 
-    $("#open-invitation").click(function(){
+    $("#open-invitation").on('click', function(){
+        alert("test");
         $("#content").show();
-        $("#first-card").slideUp();
+        $("#first-card").hide();
     });
 
     $("#message").bind('change keyup', function(){
         var totalChar = $(this).val().length;
         $("#char-count").text(totalChar);
-    })
+    });
 
     $("#rsvp-form").submit(function(e){
         e.preventDefault();
