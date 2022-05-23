@@ -32,9 +32,8 @@ $(document).ready(function(){
     }
 
     $("#open-invitation").on('click', function(){
-        $("#content").addClass('show');
-        $("#first-card").removeClass('show');
-        $("#first-card").addClass('hide');
+        $("#content").css('display', 'block');
+        $("#first-card").css('display', 'none');
     });
 
     $("#message").bind('change keyup', function(){
