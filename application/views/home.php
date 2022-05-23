@@ -152,6 +152,10 @@
     <div class="row">
         <div class="col mt-5">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.133644073796!2d106.93004054452837!3d-6.246113504453979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698cc6a9d1d8a5%3A0x943b645186f252f8!2sMasjid%20Raya%20Baitussalam!5e0!3m2!1sid!2sid!4v1653299934789!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+            <div class="mt-3 text-center">
+                <a href="https://goo.gl/maps/fJRJLerc29iUeQb89" target="_blank" class="btn btn-danger btn-lg">Rute Ke Lokasi</a>
+            </div>
         </div>
     </div>
 </div>
