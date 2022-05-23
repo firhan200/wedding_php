@@ -33,7 +33,7 @@ $(document).ready(function(){
 
     $("#open-invitation").click(function(){
         $("#content").show();
-        $("#first-card").hide();
+        $("#first-card").slideUp();
     });
 
     $("#message").bind('change keyup', function(){
