@@ -66,6 +66,13 @@ body {
 	clip-path: polygon(0 15%, 100% 0, 100% 90%, 0% 100%);
 }
 
+.guest-info{
+	background-color: #fff;
+	text-align: center;
+	opacity: 0.8;
+	margin-top:-20px;
+}
+
 /* firework */
 [class^=firework-] {
 position: absolute;

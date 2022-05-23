@@ -34,6 +34,14 @@
                             Harap Menunggu...
                         </div>
                     </div>
+                    <div class="row justify-content-center">
+                        <div class="col-sm-12 col-md-6 col-lg-6">
+                            <div class="guest-info p-3 rounded">
+                                <h5>Selamat Datang</h5>
+                                <h4><?php echo htmlspecialchars($guest->name); ?></h4>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
