@@ -142,6 +142,10 @@
                     </h4>
                 </div>
             </div>
+
+            <div class="mt-3 text-center">
+                <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Nadia+dan+Firhan&details=Tanggal+acara+pernikahan+Nadia+dan+Firhan&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FfJRJLerc29iUeQb89&dates=20221001T040000Z%2F20221001T060000Z" target="_blank" class="btn btn-danger btn-lg">Simpan ke Kalendar</a>
+            </div>
         </div>
     </div>
     <div class="row">
