@@ -11,7 +11,7 @@ class Guest extends MY_Controller {
 
 	public function index()
 	{
-		$data['list'] = $this->db->query('SELECT * FROM guest')->result();
+		$data['list'] = $this->db->query('SELECT * FROM guest ORDER BY id DESC')->result();
 
 		$this->load->view('admin/layout/header');
 		$this->load->view('admin/layout/menu');
@@ -40,10 +40,14 @@ class Guest extends MY_Controller {
 
 	public function addedit_process($id = null)
 	{
+		$is_add = true;
+
 		$data['name'] = $this->input->post('name');
 		$data['email'] = $this->input->post('email');
 		
 		if($id == null){
+			$is_add = true;
+
 			//get last data
 			$number = 1;
 			$last = $this->db->query('SELECT * FROM guest ORDER BY id DESC LIMIT 1')->row();
@@ -57,10 +61,36 @@ class Guest extends MY_Controller {
 			//get last id
 			$id = $this->db->insert_id();
 		}else{
+			$is_add = false;
+
 			$this->db->where('id', $id);
 			$this->db->update('guest', $data);
 		}
 
-		redirect('admin/guest/addedit/'.$id);
+		//show flashdata message
+		$this->session->set_flashdata('success', 'Successfully saved');
+
+		if($is_add){
+			redirect('admin/guest/index');
+		}else{
+			redirect('admin/guest/addedit/'.$id);
+		}
+	}
+
+	public function delete($id = null){
+		if($id != null){
+			//get data
+			$guest = $this->db->query('SELECT * FROM guest WHERE id='.$id)->row();
+			if($guest != null){
+				//delete
+				$this->db->where('id', $id);
+				$this->db->delete('guest');
+			}
+		}
+
+		//show flashdata message
+		$this->session->set_flashdata('success', 'Successfully delete data');
+
+		redirect('admin/guest/index');
 	}
 }
