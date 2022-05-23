@@ -32,6 +32,7 @@ $(document).ready(function(){
     }
 
     $("#open-invitation").click(function(){
+        $("#content").show();
         $("#first-card").slideUp();
     });
 
