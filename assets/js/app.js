@@ -30,4 +30,68 @@ $(document).ready(function(){
 
         timer = setInterval(updateClock, 1000);
     }
+
+    $("#message").bind('change keyup', function(){
+        var totalChar = $(this).val().length;
+        $("#char-count").text(totalChar);
+    })
+
+    $("#rsvp-form").submit(function(e){
+        e.preventDefault();
+        
+        var formData = $(this).serialize();
+
+        $.ajax({
+            url: $("body").data('site-url')+'/rsvp/submit',
+            type: 'POST',
+            data: formData,
+            beforeSend: function(){
+                $("#message").attr('disabled', true);
+                $(".btn-submit-rsvp").attr('disabled', true);
+            },
+            success: function(data){
+                var res = JSON.parse(data);
+                if(res.error !== null && res.error !== ''){
+                    alert(res.error);
+                }else{
+                    //success
+                    alert(res.message);
+                    $("#message").val('');
+
+                    getRsvp();
+                }
+                $("#message").attr('disabled', false);
+                $(".btn-submit-rsvp").attr('disabled', false);
+            },
+            error: function(err){
+                $("#message").attr('disabled', false);
+                $(".btn-submit-rsvp").attr('disabled', false);
+            }
+        });
+    })
+
+    getRsvp();
+
+    function getRsvp(){
+        $.ajax({
+            url: $("body").data('site-url')+'/rsvp/list',
+            type: 'GET',
+            data: {},
+            beforeSend: function(){
+                $("#rsvp-list").html('<div class="text-center"><i class="fa fa-spinner fa-spin fa-3x"></i></div>');
+            },
+            success: function(data){
+                var res = JSON.parse(data);
+                
+                $("#rsvp-list").html('');
+
+                for(var i=0; i< res.length;i++){
+                    $("#rsvp-list").append('<div class="p-3 mt-3 bg-light text-dark rounded"><h4><b>'+res[i].name+'</b></h4><h5>'+res[i].message+'</h5><div class="text-end">'+res[i].created_at+'</div></div>');
+                }
+            },
+            error: function(err){
+                $("#rsvp-list").html('<div class="text-center">Error saat mengambil Data.</div>');
+            }
+        });
+    }
 })

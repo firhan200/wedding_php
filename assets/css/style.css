@@ -5,6 +5,7 @@ body {
   padding: 0;
   font-family: 'Dancing Script', cursive !important;
   margin: 0;
+  overflow-x: hidden;
 }
 
 .wrapper{
@@ -20,9 +21,13 @@ body {
     width: 100%;
 
     /* Center and scale the image nicely */
-    background-position: center;
+	background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+}
+
+.clipped{
+	clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
 }
 
 .banner-text{
@@ -53,7 +58,15 @@ body {
     border-radius: 5px;
 }
 
+.section-color{
+	background-color: rgb(27, 27, 27);
+}
 
+.clipped-both{
+	clip-path: polygon(0 15%, 100% 0, 100% 90%, 0% 100%);
+}
+
+/* firework */
 [class^=firework-] {
 position: absolute;
 width: 0.1rem;

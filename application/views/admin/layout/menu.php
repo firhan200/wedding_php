@@ -15,7 +15,7 @@
                     <a class="nav-link" href="<?php echo site_url('/admin/guest/index') ?>">Guest</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">RSVP</a>
+                    <a class="nav-link" href="<?php echo site_url('/admin/rsvp/index') ?>">RSVP</a>
                 </li>
             </ul>
             <ul class="navbar-nav ms-auto">

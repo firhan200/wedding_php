@@ -19,7 +19,8 @@ class Home extends CI_Controller {
 		$this->load->view('layout/header');
 
 		if($data['is_valid']){
-			$this->load->view('home');
+			$data['guest'] = $guest;
+			$this->load->view('home', $data);
 		}else{
 			$this->load->view('invitation_not_found');
 		}
