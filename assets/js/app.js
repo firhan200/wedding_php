@@ -31,6 +31,10 @@ $(document).ready(function(){
         timer = setInterval(updateClock, 1000);
     }
 
+    $("#open-invitation").click(function(){
+        $("#first-card").slideUp();
+    });
+
     $("#message").bind('change keyup', function(){
         var totalChar = $(this).val().length;
         $("#char-count").text(totalChar);

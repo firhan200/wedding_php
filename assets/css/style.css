@@ -73,6 +73,11 @@ body {
 	margin-top:-20px;
 }
 
+.first-show{
+	position: fixed;
+	z-index: 99;
+}
+
 /* firework */
 [class^=firework-] {
 position: absolute;

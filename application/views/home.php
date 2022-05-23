@@ -16,6 +16,21 @@
 <div class="firework-15"></div>
 <!-- firework -->
 
+<div class="first-show banner-image" id="first-card">
+    <div class="container-fluid h-100">
+        <div class="row align-items-center justify-content-center h-100">
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <div class="p-3 rounded bg-light text-center">
+                    <h1>Nadia &amp; Firhan</h1>
+                    <h5 class="mt-3">Undangan Spesial Untuk:</h5>
+                    <h4 class="mt-3"><?php echo htmlspecialchars($guest->name); ?></h4>
+                    <button id="open-invitation" class="btn btn-danger mt-4" type="button">Buka Undangan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Banner -->
 <div>
     <div class="banner-image clipped"></div>
