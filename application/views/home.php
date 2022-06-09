@@ -1,61 +1,71 @@
-<!-- firework -->
-<div class="firework-1"></div>
-<div class="firework-2"></div>
-<div class="firework-3"></div>
-<div class="firework-4"></div>
-<div class="firework-5"></div>
-<div class="firework-6"></div>
-<div class="firework-7"></div>
-<div class="firework-8"></div>
-<div class="firework-9"></div>
-<div class="firework-10"></div>
-<div class="firework-11"></div>
-<div class="firework-12"></div>
-<div class="firework-13"></div>
-<div class="firework-14"></div>
-<div class="firework-15"></div>
-<!-- firework -->
-
 <div class="first-show banner-image" id="first-card">
     <div class="container-fluid h-100">
         <div class="row justify-content-center align-items-center h-100">
             <div class="col-sm-12 col-md-6 col-lg-6 mt-5 pt-5 mb-5">
                 <div class="p-3 rounded text-light text-center">
-                    <h1>Nadia &amp; Firhan</h1>
-                    <h5 class="mt-3">Undangan Spesial Untuk:</h5>
-                    <h4 class="mt-3"><?php echo htmlspecialchars($guest->name); ?></h4>
-                    <a id="open-invitation" class="btn btn-danger mt-4" href="#!">Buka Undangan</a>
+                    <h1 style="font-size:42pt" class="special_font"><span style="font-size:60pt !important">N</span>adia &amp; <span style="font-size:60pt !important">F</span>irhan</h1>
+                    <h3 class="mt-3">Undangan Spesial Untuk:</h3>
+                    <h2 class="mt-3 bg-light text-dark p-4 rounded"><?php echo htmlspecialchars($guest->name); ?></h2>
+                    <a id="open-invitation" class="btn btn-danger mt-4 btn-lg" href="#!">Buka Undangan</a>
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div id="content" style="display:none;">
+<div id="content" style="display:none">
+    <div class="container mt-5" style="display:none">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-6 text-center">
+                <div style="font-size:20pt;" class="normal_font">
+                    Maha Suci Allah Ta'Ala
+                    <br/>
+                    Yang telah menciptakan makhlukNya berpasang-pasangan. 
+                    <br/>
+                    Ya Allah, perkenankanlah dan ridhoilah pernikahan kami:
+                </div>
+                <div class="mt-5">
+                    <h1 style="font-size:32pt">Nadia Futri</h1>
+                    <img src="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880" class="img-thumbnail rounded-circle w-50"/>
+                </div>
+                <div class="mt-5">
+                    <h1 style="font-size:32pt">Firhan Faisal</h1>
+                    <img src="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880" class="img-thumbnail rounded-circle w-50"/>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid normal_font" style="display:none">
+        <div class="container text-center p-5">
+            <h1>SAVE THE DATE</h1>
+        </div>
+    </div>
+
     <!-- Banner -->
     <div>
         <div class="banner-image clipped"></div>
 
-        <div class="container-fluid h-100 banner-text">
+        <div class="container-fluid h-100 banner-text normal_font">
             <div class="container h-100">
                 <div class="row align-items-center h-100">
                     <div class="col-md-12">
+                        <div class="row justify-content-center">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
+                                <div class="guest-info p-3 rounded text-dark mb-5">
+                                    <h5>Selamat Datang</h5>
+                                    <h4><?php echo htmlspecialchars($guest->name); ?></h4>
+                                </div>
+                            </div>
+                        </div>
                         <div class="main-banner-text text-center">
                             <h1>Pernikahan</h1>
 
                             <p class="mt-5 big-title">Nadia &amp; Firhan </p>
 
                             <h2 class="mt-5">1 Oktober 2022</h2>
-                            <div id="time-elapsed" class="mt-4">
+                            <div id="time-elapsed" class="mt-5">
                                 Harap Menunggu...
-                            </div>
-                        </div>
-                        <div class="row justify-content-center">
-                            <div class="col-sm-12 col-md-6 col-lg-6">
-                                <div class="guest-info p-3 rounded">
-                                    <h5>Selamat Datang</h5>
-                                    <h4><?php echo htmlspecialchars($guest->name); ?></h4>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -132,7 +142,7 @@
     <!-- Pengantin -->
 
     <!-- Lokasi -->
-    <div class="container mt-5 mb-5">
+    <div class="container-fluid mt-5 mb-5">
         <div class="row">
             <div class="col text-center">
                 <h1><b>Waktu &amp; Tempat</b></h1>
@@ -167,6 +177,11 @@
         <div class="row">
             <div class="col text-center mt-5">
                 <h1><b>Lokasi</b></h1>
+            </div>
+        </div>
+        <div class="row justify-content-center text-center">
+            <div class="col-12 col-sm-12 col-md-8 col-lg-6">
+                <h3>Masjid Raya Baitussalam (Billymoon), Perumahan Billymoon, Jalan Kelapa Hijau II No.1, Pondok Kelapa, Duren Sawit, Jakarta Timur.</h3>
             </div>
         </div>
         <div class="row">

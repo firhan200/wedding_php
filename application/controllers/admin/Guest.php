@@ -93,4 +93,14 @@ class Guest extends MY_Controller {
 
 		redirect('admin/guest/index');
 	}
+
+	public function import()
+	{
+		$data['list'] = $this->db->query('SELECT * FROM guest ORDER BY id DESC')->result();
+
+		$this->load->view('admin/layout/header');
+		$this->load->view('admin/layout/menu');
+		$this->load->view('admin/guest/list', $data);
+		$this->load->view('admin/layout/footer');
+	}
 }
