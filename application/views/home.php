@@ -11,7 +11,7 @@
             </div>
         </div>
     </div>
-</div>
+</div> 
 
 <div id="content" style="display:none">
     <div class="container mt-5" style="display:none">
@@ -61,9 +61,9 @@
                         <div class="main-banner-text text-center">
                             <h1>Pernikahan</h1>
 
-                            <p class="mt-5 big-title">Nadia &amp; Firhan </p>
+                            <p class="mt-2 big-title">Nadia &amp; Firhan </p>
 
-                            <h2 class="mt-5">1 Oktober 2022</h2>
+                            <h2 class="mt-2">1 Oktober 2022</h2>
                             <div id="time-elapsed" class="mt-5">
                                 Harap Menunggu...
                             </div>
@@ -170,7 +170,7 @@
                 </div>
 
                 <div class="mt-3 text-center">
-                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Nadia+dan+Firhan&details=Tanggal+acara+pernikahan+Nadia+dan+Firhan&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FfJRJLerc29iUeQb89&dates=20221001T040000Z%2F20221001T060000Z" target="_blank" class="btn btn-danger btn-lg">Simpan ke Kalendar</a>
+                    <a href="https://www.google.com/calendar/render?action=TEMPLATE&text=Pernikahan+Nadia+dan+Firhan&details=Tanggal+acara+pernikahan+Nadia+dan+Firhan&location=https%3A%2F%2Fgoo.gl%2Fmaps%2FfJRJLerc29iUeQb89&dates=20221001T040000Z%2F20221001T060000Z" target="_blank" data-action="Add To Calendar" class="btn-log btn btn-danger btn-lg">Simpan ke Kalendar</a>
                 </div>
             </div>
         </div>
@@ -189,7 +189,7 @@
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.133644073796!2d106.93004054452837!3d-6.246113504453979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698cc6a9d1d8a5%3A0x943b645186f252f8!2sMasjid%20Raya%20Baitussalam!5e0!3m2!1sid!2sid!4v1653299934789!5m2!1sid!2sid" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
                 <div class="mt-3 text-center">
-                    <a href="https://goo.gl/maps/fJRJLerc29iUeQb89" target="_blank" class="btn btn-danger btn-lg">Rute Ke Lokasi</a>
+                    <a href="https://goo.gl/maps/fJRJLerc29iUeQb89" data-action="Route to Location" target="_blank" class="btn btn-danger btn-lg btn-log">Rute Ke Lokasi</a>
                 </div>
             </div>
         </div>
@@ -203,14 +203,14 @@
                 <div class="col-sm-12 text-white pt-5 pb-5">
                     <h1 class="text-center">Ucapan Selamat</h1>
                     <form id="rsvp-form" action="javascript:void(0)" method="post">
-                        <input type="hidden" name="token" value="<?php echo $guest->token ?>" />
+                        <input type="hidden" id="token" name="token" value="<?php echo $guest->token ?>" />
                         <div class="mt-3">
                             <strong>Pesan</strong>
                             <textarea name="message" id="message" class="form-control" maxlength="500" placeholder="Masukan Ucapan & Pesan Anda untuk Pengantin..." required></textarea>
                             <div>Jumlah Karakter: <span id="char-count">0</span>/500</div>
                         </div>
                         <div class="mt-3">
-                            <button class="btn btn-light btn-lg btn-submit-rsvp">Submit</button>
+                            <button data-action="Submit RSVP" class="btn-log btn btn-light btn-lg btn-submit-rsvp">Submit</button>
                         </div>
                     </form>
                     <div id="rsvp-list"></div>

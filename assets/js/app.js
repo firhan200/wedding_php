@@ -31,9 +31,64 @@ $(document).ready(function(){
         timer = setInterval(updateClock, 1000);
     }
 
+    $(".btn-log").click(function(){
+        var action = $(this).data('action');
+        log_action(action);
+    })
+
+    function log_action(action){
+        $.ajax({
+            url: $("body").data('site-url')+'/home/open_invitation',
+            data: {
+                'token' : $("#token").val(),
+                'log' : action
+            },
+            type: 'POST',
+            success: function(data){
+                const response = JSON.parse(data);
+
+                if(response.error === null){
+                    //success
+                }else{
+                    //err
+                    alert(response.error);
+                }
+            },
+            error: function(err){
+                //err
+            }
+        })
+    }
+
     $("#open-invitation").on('click', function(){
-        $("#content").css('display', 'block');
-        $("#first-card").css('display', 'none');
+        var originalHtml = $(this).html();
+
+        $.ajax({
+            url: $("body").data('site-url')+'/home/open_invitation',
+            data: {
+                'token' : $("#token").val(),
+                'log' : 'Open Invitation'
+            },
+            type: 'POST',
+            beforeSend: function(){
+                $(this).html('<i class="fa fa-spinner fa-spin"></i>');
+            },
+            success: function(data){
+                const response = JSON.parse(data);
+
+                if(response.error === null){
+                    $("#content").css('display', 'block');
+                    $("#first-card").css('display', 'none');
+                }else{
+                    alert(response.error);
+                    $(this).html(originalHtml);
+                }
+            },
+            error: function(err){
+                alert("error");
+                $(this).html(originalHtml);
+            }
+        })
     });
 
     $("#message").bind('change keyup', function(){

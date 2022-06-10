@@ -13,6 +13,12 @@ class Home extends CI_Controller {
 			$guest = $this->db->query('SELECT * FROM guest WHERE token="'.$token.'"')->row();
 			if($guest != null){
 				$data['is_valid'] = true;
+
+				//insert log
+				$this->db->insert('guest_log', array(
+					'guest_id' => $guest->id,
+					'action' => 'Visit Page'
+				));
 			}
 		}
 
@@ -26,5 +32,29 @@ class Home extends CI_Controller {
 		}
 
 		$this->load->view('layout/footer');
+	}
+
+	public function open_invitation(){
+		$res = array(
+			'error' => null,
+			'data' => null
+		);
+
+		$token = $this->input->post('token');
+		$log = $this->input->post('log');
+
+		//check if token is valid
+		$guest = $this->db->query('SELECT * FROM guest WHERE token="'.$token.'"')->row();
+		if($guest){
+			//insert log
+			$this->db->insert('guest_log', array(
+				'guest_id' => $guest->id,
+				'action' => $log
+			));
+		}else{
+			$res['error'] = 'Invalid Token';
+		}
+
+		echo json_encode($res);
 	}
 }
