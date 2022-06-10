@@ -86,7 +86,7 @@ body {
 
 .first-show{
 	position: absolute;
-	transition: all .5s ease-out;
+	transition: all 2s ease-out;
 	top:0%;
 	background-color: rgb(116, 27, 27);
 	z-index: 99;

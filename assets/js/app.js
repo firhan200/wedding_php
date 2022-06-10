@@ -5,6 +5,11 @@ $(document).ready(function(){
 
     $('body').parallax();
 
+    function custom_show(obj, mode) {
+        obj.children().addClass('animation animation_'+mode);
+    }
+        
+
     function startCount(){
         var startDateTime = new Date(2022,9,1,11,0,0,0); // YYYY (M-1) D H m s ms (start time and date from DB)
         var startStamp = startDateTime.getTime();
@@ -83,9 +88,11 @@ $(document).ready(function(){
                     $("#first-card").addClass('go-up');
 
                     //scroll 20 px to down
-                    $("html, body").animate({
-                        scrollTop: $("#content").offset().top + 20
-                    }, 500);
+                    setTimeout(function(){
+                        $("html, body").animate({
+                            scrollTop: $("#content").offset().top + 20
+                        }, 0);
+                    }, 200);
                 }else{
                     alert(response.error);
                     $(this).html(originalHtml);
