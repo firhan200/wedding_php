@@ -3,6 +3,8 @@ $(document).ready(function(){
         startCount();
     }
 
+    $('body').parallax();
+
     function startCount(){
         var startDateTime = new Date(2022,9,1,11,0,0,0); // YYYY (M-1) D H m s ms (start time and date from DB)
         var startStamp = startDateTime.getTime();
@@ -79,6 +81,11 @@ $(document).ready(function(){
                 if(response.error === null){
                     $("#content").css('display', 'block');
                     $("#first-card").addClass('go-up');
+
+                    //scroll 20 px to down
+                    $("html, body").animate({
+                        scrollTop: $("#content").offset().top + 20
+                    }, 500);
                 }else{
                     alert(response.error);
                     $(this).html(originalHtml);

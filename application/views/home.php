@@ -43,7 +43,7 @@
     </div>
 
     <!-- Banner -->
-    <div>
+    <div data-rate="0.5" data-effect="flip-x">
         <div class="banner-image clipped"></div>
 
         <div class="container-fluid h-100 banner-text normal_font">
@@ -76,7 +76,7 @@
     <!-- Banner -->
 
     <!-- Info -->
-    <div class="container mt-5 mb-5">
+    <div class="container mt-5 mb-5" data-rate="0.5" data-effect="flip-y">
         <div class="row">
             <div class="col text-center">
                 <h1><b>Informasi</b></h1>
@@ -102,7 +102,7 @@
     <!-- Info -->
 
     <!-- Pengantin -->
-    <div class="section-color p-5 text-white clipped-both">
+    <div class="section-color p-5 text-white clipped-both" data-rate="0.5" data-effect="zoom">
         <div class="container mt-5 mb-5">
             <div class="row">
                 <div class="col text-center">
@@ -110,7 +110,7 @@
                 </div>
             </div>
             <div class="row mt-5 justify-content-center">
-                <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3 text-center">
+                <div class="col-sm-6 col-md-5 col-lg-4 col-xl-3 text-center mb-4">
                     <img src="https://images.unsplash.com/photo-1640960543409-dbe56ccc30e2?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880" class="img-thumbnail rounded-circle w-50"/>
                     <h3 class="mt-4">Nadia Futri</h3>
                     <h5>
@@ -142,7 +142,7 @@
     <!-- Pengantin -->
 
     <!-- Lokasi -->
-    <div class="container-fluid mt-5 mb-5">
+    <div class="container-fluid mt-5 mb-5" data-rate="0.5" data-effect="zoom">
         <div class="row">
             <div class="col text-center">
                 <h1><b>Waktu &amp; Tempat</b></h1>
@@ -197,7 +197,7 @@
     <!-- Lokasi -->
 
     <!-- RSVP -->
-    <div class="section-color">
+    <div class="section-color" data-rate="0.5" data-effect="flip-x">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 text-white pt-5 pb-5">
