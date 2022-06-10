@@ -78,7 +78,7 @@ $(document).ready(function(){
 
                 if(response.error === null){
                     $("#content").css('display', 'block');
-                    $("#first-card").css('display', 'none');
+                    $("#first-card").addClass('go-up');
                 }else{
                     alert(response.error);
                     $(this).html(originalHtml);
